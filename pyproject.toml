@@ -1,0 +1,32 @@
+[project]
+name = "donaldjpt"
+version = "0.0.1"
+description = "Minimalistic small language model built around various things said by Donald J. Trump"
+readme = "README.md"
+authors = [
+    { name = "Kiril B", email = "kbo+git@ikmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "transformers[torch]>=5.17",
+    "datasets>=5.0",
+    "pandas>=2.2",
+    "pyarrow>=25.0",
+    "gradio>=6.29",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = [
+"pytest",
+"autopep8",
+"flake8",
+"black",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["donaldjpt*"]

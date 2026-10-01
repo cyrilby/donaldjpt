@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+src/donaldjpt/__init__.py
+src/donaldjpt/app.py
+src/donaldjpt/inference.py
+src/donaldjpt/training.py
+src/donaldjpt/utils.py
+src/donaldjpt.egg-info/PKG-INFO
+src/donaldjpt.egg-info/SOURCES.txt
+src/donaldjpt.egg-info/dependency_links.txt
+src/donaldjpt.egg-info/requires.txt
+src/donaldjpt.egg-info/top_level.txt
