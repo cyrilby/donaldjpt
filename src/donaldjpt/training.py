@@ -17,7 +17,7 @@ from donaldjpt.utils import clean_dir_if_exists, get_project_root
 
 
 def load_raw_data(
-    file_name: str = "speeches.csv",
+    file_name: str = "train.csv",
     data_col: str = "sentence",
     data_points_limit: int | None = None,
 ) -> str:
@@ -175,7 +175,7 @@ def train_gpt2_model(
     training_args = TrainingArguments(
         output_dir=training_dir,
         num_train_epochs=num_train_epochs,
-        # Increase/decrease according to your hardware.
+        # Increase/decrease according to your hardware
         per_device_train_batch_size=4,
         learning_rate=5e-4,
         logging_steps=10,
@@ -211,7 +211,7 @@ if __name__ == "__main__":
 
     # Test the model on a tiny subset of the data
     # and only running one epoch
-    train_gpt2_model(data_points_limit=20_000, num_train_epochs=3)
+    train_gpt2_model(num_train_epochs=1)
 
 
 # %%
