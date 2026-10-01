@@ -5,6 +5,14 @@
 
 This repository contains a minimalistic pipeline for training a small language model based on custom data imported from a CSV file and then using the model for inference via a tiny web app. Essentially, this is a custom implementation of the `GPT2LMHeadModel` model.
 
+## Teaser
+
+The output of this exercise is a probabilistic language model that can be prompted to give different answers, for instance:
+
+<img src="assets/example.png"></img>
+
+You can read more about how to use the product in the *Inference and front end* section at the bottom.
+
 ## Requirements
 
 - Python 3.14
@@ -35,7 +43,7 @@ Model training (including data import and tokenization) is implemented via the `
 5. Specify `TrainingArguments`, `DataCollator` and `Trainer`, the run the actual training process.
 6. Export the final model and its tokenizer to the `.model` folder so that they can be used for inference.
 
-## Inference
+## Inference and front end
 
 Inference can be called programmatically via the `prompt_model()` function. However, to make it easier to use for non-technical people, a demo web app based on the `gradio` framework has been added.
 
